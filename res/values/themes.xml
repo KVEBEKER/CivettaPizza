@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.CivettaPizza" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <item name="android:statusBarColor">#FFE4A84F</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:backgroundTint">@color/none</item>
+        <item name="materialAlertDialogTheme">@style/CivettaAlertDialog</item>
+    </style>
+
+    <style name="Theme.CivettaPizza.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/second_accent</item>
+        <item name="postSplashScreenTheme">@style/Theme.CivettaPizza</item>
+    </style>
+
+    <style name="CivettaAlertDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="materialAlertDialogTitleTextStyle">@color/sub_text_dark_color</item>
+        <item name="materialAlertDialogBodyTextStyle">@color/sub_text_light_color</item>
+        <item name="buttonBarPositiveButtonStyle">@style/MyPositiveButtonStyle</item>
+        <item name="shapeAppearanceSmallComponent">@style/RoundedDialog</item>
+    </style>
+
+    <style name="MyPositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/positive_green</item>
+        <item name="android:fontFamily">@font/prosto_one_regular</item>
+    </style>
+
+    <style name="ProstoOneFont">
+        <item name="android:fontFamily">@font/prosto_one_regular</item>
+    </style>
+
+    <style name="RoundedDialog" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+</resources>

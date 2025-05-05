@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/accountFragment"
+        android:title="@string/account_rus"
+        android:icon="@drawable/user"/>
+    <item
+        android:id="@+id/mapFragment"
+        android:title="@string/map_rus"
+        android:icon="@drawable/map_pin"/>
+    <item
+        android:id="@+id/mainClientFragment"
+        android:title="@string/menu_rus"
+        android:icon="@drawable/menu"/>
+    <item
+        android:id="@+id/owlcoinFragment"
+        android:title="@string/owlcoins_rus"
+        android:icon="@drawable/owl_coin"/>
+    <item
+        android:id="@+id/orderClientFragment"
+        android:title="@string/order_rus"
+        android:icon="@drawable/shopping_bag"/>
+</menu>

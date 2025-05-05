@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authorizationFragment">
+
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.AuthorizationFragment"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorizationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_authorizationFragment_to_mainClientFragment"
+            app:destination="@id/mainClientFragment"
+            app:popUpTo="@id/authorizationFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_authorizationFragment_to_mainEmployeeFragment"
+            app:destination="@id/mainEmployeeFragment"
+            app:popUpTo="@id/authorizationFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_authorizationFragment"
+            app:destination="@id/authorizationFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_mainClientFragment"
+            app:destination="@id/mainClientFragment"
+            app:popUpTo="@id/authorizationFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainClientFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.MainClientFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_main_client" >
+        <action
+            android:id="@+id/action_mainClientFragment_to_orderClientFragment"
+            app:destination="@id/orderClientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainEmployeeFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.MainEmployeeFragment"
+        android:label="fragment_main_employee"
+        tools:layout="@layout/fragment_main_employee" >
+        <action
+            android:id="@+id/action_mainEmployeeFragment_to_accountEmployeeFragment"
+            app:destination="@id/accountEmployeeFragment" />
+        <action
+            android:id="@+id/action_mainEmployeeFragment_to_orderEmployeeFragment"
+            app:destination="@id/orderEmployeeFragment" />
+        <action
+            android:id="@+id/action_mainEmployeeFragment_to_pastOrderEmployeeFragment"
+            app:destination="@id/pastOrderEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderClientFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.OrderClientFragment"
+        android:label="Order"
+        tools:layout="@layout/fragment_order_client" >
+        <action
+            android:id="@+id/action_orderClientFragment_to_pastOrderClientFragment"
+            app:destination="@id/pastOrderClientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pastOrderClientFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.PastOrderClientFragment"
+        android:label="PastOrderClientFragment" >
+        <action
+            android:id="@+id/action_pastOrderClientFragment_to_orderClientFragment"
+            app:destination="@id/orderClientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/owlcoinFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.OwlcoinFragment"
+        android:label="Owlcoin"
+        tools:layout="@layout/fragment_owlcoin" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.MapFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/orderEmployeeFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.OrderEmployeeFragment"
+        android:label="fragment_order_employee"
+        tools:layout="@layout/fragment_order_employee" >
+        <action
+            android:id="@+id/action_orderEmployeeFragment_to_mainEmployeeFragment"
+            app:destination="@id/mainEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountEmployeeFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.AccountEmployeeFragment"
+        android:label="fragment_account_employee"
+        tools:layout="@layout/fragment_account_employee" >
+        <action
+            android:id="@+id/action_accountEmployeeFragment_to_mainEmployeeFragment"
+            app:destination="@id/mainEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pastOrderEmployeeFragment"
+        android:name="ru.kvebekshaev.civettapizza.presentation.fragments.PastOrderEmployeeFragment"
+        android:label="fragment_past_order_employee"
+        tools:layout="@layout/fragment_past_order_employee" >
+        <action
+            android:id="@+id/action_pastOrderEmployeeFragment_to_mainEmployeeFragment"
+            app:destination="@id/mainEmployeeFragment" />
+    </fragment>
+</navigation>

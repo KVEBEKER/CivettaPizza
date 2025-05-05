@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Круг -->
+    <path
+        android:name="circle"
+        android:pathData="M50,0 a50,50 1 1,0 0.001,0"
+        android:fillColor="@color/second_accent"/>
+
+
+    <!-- Наконечник стрелки (треугольник) -->
+    <path
+        android:name="arrow_head"
+        android:pathData="M40,35 L60,50 L40,65"
+        android:strokeWidth="3"
+        android:strokeColor="@color/text"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+</vector>
